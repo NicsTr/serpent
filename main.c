@@ -1,4 +1,4 @@
-#include "serpent.h"
+#include "serpent_algo.h"
 
 int main() {
     struct serpent_state st;
@@ -35,5 +35,6 @@ int main() {
     printf("%08x", pt2[1]);
     printf("%08x\n", pt2[0]);
 
+    free(key);
     return 0;
 }

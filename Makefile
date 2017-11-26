@@ -1,4 +1,4 @@
-OBJECTS := serpent.o main.o
+OBJECTS := serpent_algo.o main.o
 CC := gcc
 FLAGS := -Wall
 
@@ -11,7 +11,7 @@ all: default
 clean:
 	rm -rf $(OBJECTS) main
 
-%.o: %.c
+%.o: %.c %.h
 	${CC} ${FLAGS} -c -o $@ $<
 
 main: $(OBJECTS)
